@@ -6,13 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/97e043a9ab.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Tony</title>
 </head>
 <body>
+    <header class="nav-header">
+        <nav>
+            <div class="logo">
+                <h1><a href="#">HeY Folks</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <div class="btn-div">
+                <button>Hire Me</button>
+                <div class="toggle-btn">
+                    <i class="fa-solid fa-bars" id="toggle-btn-icon"></i>
+                </div>
+            </div>
+        </nav>
+        <div class="dropdown ">
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Contact</a></li>
+                <li><button>Hire Me</button></li>
+            </ul>
+        </div>
+    </header>
 
-    <header class="">
+    <header class="tony">
         <h1>H! am TONY</h1>
-        <p> Web3 - DevOps </p>
+        <p> Web - DevOps </p>
     </header>
 
     <section class="hero">
@@ -51,18 +80,33 @@
 
     </section>
 
-
     <footer>
         <div>
-            <i class="fa-brands fa-instagram fa-bounce "></i>
+            <a href="https://instagram.com/tonjozf?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram fa-bounce "></i></a>
             <i class="fa-brands fa-x-twitter fa-flip"></i>
             <i class="fa-brands fa-whatsapp fa-fade"></i>
             <i class="fa-brands fa-linkedin fa-shake"></i>
             <i class="fa-brands fa-github fa-bounce"></i>
         </div>
-        
         <p>&copy; 2023 tony. All rights reserved.</p>
+
     </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const toggleBtnIcon = document.querySelector('#toggle-btn-icon');
+        const dropDown = document.querySelector('.dropdown');
+    
+        toggleBtn.onclick = function () {
+            dropDown.classList.toggle ('open');
+            const isOpen = dropDown.classList.contains('open');
+    
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark' 
+            : 'fa-solid fa-bars';
+        }
+    
+    </script>
 
 </body>
 </html>
