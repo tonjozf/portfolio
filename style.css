@@ -98,9 +98,38 @@ footer{
     width: 100%;
     height: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
+    margin-top: 80px;
 }
+
+i.fa-brands{
+font-size: 29px;
+color: red;
+margin: 25px 10px;
+
+}
+i.fa-instagram{
+  color: rgb(173, 40, 62);
+}
+
+i.fa-x-twitter{
+    color: white;
+
+}
+i.fa-github{
+    color: white;
+}
+i.fa-whatsapp{
+    color: green;
+}
+i.fa-linkedin{
+    color: rgb(24, 151, 225);
+    
+}
+
+
 
 
