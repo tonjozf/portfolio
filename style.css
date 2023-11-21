@@ -4,24 +4,155 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    background: url('top-tips-improve-landscapes-ross-hoddinott-11-1200x675-cropped.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+header.nav-header{
+    position: relative;
+    z-index: 100;
+}
+nav{
+    width: 100%;;
+    height: 70px;
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a,nav i,.dropdown a{
+    color: #fff;
+}
+nav .logo h1 a{
+    color: rgb(255, 115, 0);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul li{
+    margin: 0 40px;
+
+}
+nav ul li a:hover ,.dropdown ul li a:hover{
+    color: rgb(255, 115, 0);
+}
+nav button , .dropdown button{
+    padding: 5px 15px;
+    background: rgb(225, 8, 8);
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+nav button:hover{
+    background: rgb(170, 6, 6);
+}
+nav .btn-div{
+    display: flex;
+    align-items: center;
+    /* justify-content: ; */
+}
+nav .toggle-btn{
+    transition: .3s;
+}
+nav i {
+    display: none;
+    font-size: 30px;
+    transition: .3s;
+}
+nav i.fa-bars{
+    display: none;
+}
+
+
+.dropdown{
+    position: absolute;
+    right: 2rem;
+    top: 80px;
+    width: 300px;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.2s cubic-bezier(.175, 0.885,0.32, 1.275)
+}
+.dropdown button{
+    margin: 0;
+    display: none;
+}
+.dropdown.open{
+    height: 240px;
+}
+.dropdown ul li{
+    margin: 18px 0;
+    font-size: 18px;
+    width: 100%;
+}
+
+@media ( max-width : 850px){
+    nav ul{
+        display: none;
+    }
+    nav{
+        justify-content: space-between;
+        padding: 0 40px;
+    }
+    nav i.fa-bars{
+        display: block;
+    }
+    .dropdown button{
+        display: none;
+    }
+}
+@media ( max-width : 500px){
+    nav button {
+        display: none;
+    }
+    .dropdown button{
+        display: block;
+    }
+    .dropdown {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+
 body{
     background: #000;
     height: 100%;
     width: 100%;
 }
-header{
+header.tony{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100px;
+    margin-top: 40px;
+    z-index: 98;
 }
-header h1{
+header.tony h1{
     color: #fff;
-}
-header p{
-    color: #fff;
-    margin-top: 20px;
+    font-size: 25px;
 }
 .hero{
     padding: 20px 40px;
@@ -31,6 +162,7 @@ header p{
     flex-wrap: wrap;
     min-height: 80vh;
     gap: 1rem;
+    z-index: 98;
 }
 .hero .card {
     border: 20px solid;
@@ -39,8 +171,6 @@ header p{
     margin-top: 30px;
     
 }
-
-
 .black-div{
     background: #000;
     color:#000;
@@ -93,7 +223,6 @@ header p{
     border: 1px solid #fff;
     color: #fff;
 }
-
 footer{
     width: 100%;
     height: 100px;
@@ -102,9 +231,7 @@ footer{
     justify-content: center;
     align-items: center;
     color: #fff;
-    margin-top: 80px;
 }
-
 i.fa-brands{
 font-size: 29px;
 color: red;
@@ -127,6 +254,7 @@ i.fa-whatsapp{
 }
 i.fa-linkedin{
     color: rgb(24, 151, 225);
+    
 }
 
 
