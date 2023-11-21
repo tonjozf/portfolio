@@ -18,6 +18,9 @@ header{
 header h1{
     color: #fff;
 }
+.head{
+     color:white;
+}
 .hero{
     padding: 20px 40px;
     display: flex;
