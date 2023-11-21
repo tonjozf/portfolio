@@ -11,6 +11,7 @@ body{
 }
 header{
     display: flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     height: 100px;
@@ -18,8 +19,9 @@ header{
 header h1{
     color: #fff;
 }
-.head{
-     color:white;
+header p{
+    color: white;
+    margin-top: 20px;
 }
 .hero{
     padding: 20px 40px;
