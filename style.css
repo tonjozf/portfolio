@@ -87,7 +87,7 @@ nav i.fa-bars{
     height: 0;
     overflow: hidden;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(5, 5, 5, 0.929);
     backdrop-filter: blur(25px);
     display: flex;
     flex-direction: column;
